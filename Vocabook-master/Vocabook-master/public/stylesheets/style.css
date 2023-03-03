@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+  
+
+a {
+  color: #00B7FF;
+}
+
+
+@media (max-width: 768px) {
+  .center_align_mobile
+  {
+    text-align: center !important;
+    justify-content:center !important;
+  }
+}
+
+
+  
+#hero {
+  width: 100% !important;
+  height: 100vh !important;
+  background-image: url("../images/Background.jpg") !important;
+  background-size: cover !important;
+  position: relative !important;
+}
+
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+#hero .hero-container{
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  }
+
+  #heo:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  #hero h1 {
+    margin: 30px 0 10px 0;
+    font-size: 62px;
+    font-weight: 700;
+    line-height: 56px;
+    /* text-transform: uppercase; */
+    color: #1b1c1d;
+  }
+  
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 48px;
+      line-height: 36px;
+    }
+  }
+  
+  #hero h2 {
+    color: #1b1c1d ;
+    margin-bottom: 50px;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 30px;
+    }
+  }
+  
+  #hero .btn-get-started {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 28px;
+    background:#1b1c1d;
+    border-radius: 50px;
+    transition: .5s;
+    margin: 10px;
+    border: 1px solid white;
+    color: rgb(214, 214, 214);
+  }
+  
+  #hero .btn-get-started:hover {
+    background: 0;
+    color: #1b1c1d;
+    border: 1px solid #1b1c1b; 
+  }
+
+/* sign up page */
+
+.register{
+  border: 1px solid #1b1c1b;
+  position: relative;
+}
+
+
+/* login */
+
+.bgimage_login{
+  width: 100% !important;
+  height: 100vh !important;
+  background-image: url("../images/login_bg.jpg") !important;
+  background-size: cover !important;
+  position: fixed !important;
+}
+
+
+@media (min-width: 1024px) {
+  .bgimage_login{
+    background-attachment: fixed;
+  }
+}
+
+
+.login-form{
+  width: 360px;
+  background: #f1f1f1;
+  height: 560px;
+  padding: 80px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  text-decoration: none;
+  /* font-family: montserrat; */
+  box-sizing: border-box;
+
+}
+@media (min-width: 1024px) {
+  .login-form {
+    margin-top: 3%;
+  }
+}
+
+.login-form h1{
+  text-align: center;
+  margin-bottom: 60px;
+}
+.login-form h2{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.txtb{
+  border-bottom: 2px solid #adadad;
+  position: relative;
+  margin: 30px 0;
+}
+
+.txtb input{
+  font-size: 15px;
+  color: #333;
+  border: none;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 0 5px;
+  height: 40px;
+}
+
+.txtb span::before{
+  content: attr(data-placeholder);
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: .5s;
+}
+
+.txtb span::after{
+  top:100%;
+  left: 0;
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #1b1c1d;
+  transition: .5s;
+}
+.focus + span::after{
+  width: 100%;
+}
+
+
+.focus + span::before{
+  top: -5px;
+}
+
+.logbtn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #1b1c1d;
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .5s;
+  border-radius: 25px;
+}
+
+.logbtn:hover{
+ background: rgb(214, 214, 214);
+ color:#1b1c1d;
+ font-weight: bold;
+ border: 1px solid #1b1c1b;
+
+}
+.delete_button{
+
+  margin-top: 70px;
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #1b1c1d;
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .5s;
+  border-radius: 25px;
+}
+
+.delete_button:hover{
+ background: rgb(214, 214, 214);
+ color:#1b1c1d;
+ font-weight: bold;
+ border: 1px solid #1b1c1b;
+
+}
+
+.bottom-text{
+  margin-top: 60px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+
+
+/* //////////////////// */
+
+/* SIgn up  */
+
+/* //////////////////// */
+
+.register-form{
+    width: 360px;
+    background: #f1f1f1;
+    height: 560px;
+    padding: 30px 40px;
+    border-radius: 10px;
+    position: relative !important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-decoration: none;
+    box-sizing: border-box;
+}
+@media (min-width: 1024px) {
+  .register-form {
+    margin-top: 3%;
+  }
+}
+
+.register-form h1{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+
+
+.register-btn{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border: none;
+  background: #1b1c1d;
+  background-size: 200%;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: .5s;
+  border-radius: 25px;
+}
+
+.register-btn:hover{
+ background: rgb(214, 214, 214);
+ color:#1b1c1d;
+ font-weight: bold;
+ border: 1px solid #1b1c1b;
+
+}
+
+.register-bottom-text{
+  margin-top: 50px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+/* ////// dashboard ////// */
+
+
+.dashboard{
+  background:white;
+  height: 560px;
+}
+
+.feed{
+  background:white;
+  
+}
+
+#search_result{
+  visibility: hidden;
+}
+
+
+
+* Dropdown Button */
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color:#3e8e41;}

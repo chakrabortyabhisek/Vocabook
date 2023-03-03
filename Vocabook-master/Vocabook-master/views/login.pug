@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    .bgimage_login
+        form.login-form(action="/users/login/submit", method="post")
+            h1 Login
+            .txtb
+                input(type='text' , autocomplete='off',name='username', id=username)
+                span(data-placeholder='Username')
+            .txtb
+                input(type='password', autocomplete='off', name='password', id=password)
+                span(data-placeholder='Password')
+            input.logbtn(type='submit', value='Login')
+            .bottom-text
+                | Don't have account? 
+                a(href='/users/register') Register
+
+    script.
+        $(".txtb input").on("focus",function(){
+        $(this).addClass("focus");
+        });
+        $(".txtb input").on("blur",function(){
+        if($(this).val() == "")
+        $(this).removeClass("focus");
+        });
